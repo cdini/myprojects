@@ -23,7 +23,7 @@ Nam Sinh : 2005
 
 output:
 
-        Thông tin sinh viên thứ ...
+                    Thông tin sinh viên thứ ...
 mssv : 109641
 
 Ho ten : Nguyen Van A
