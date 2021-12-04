@@ -11,18 +11,17 @@ struct sinhvien
   int namsinh;
 };
 typedef struct sinhvien sv;
-
 /// nhap thong tin cua mot sinh vien
 void Nhap_Thongtin_Sinhvien(sv &x)
 {
-  fflush(stdin);
-  cout << "Nhap mssv: " << endl;
+  while(getchar() != '\n');
+  cout << "\nNhap mssv: ";
   getline(cin, x.mssv);
-  cout << "Nhap ho ten: " << endl;
+  cout << "\nNhap ho ten: ";
   getline(cin, x.HoTen);
-  cout << "Nhap diem sinh vien: " << endl;
+  cout << "\nNhap diem sinh vien: ";
   cin >> x.diem;
-  cout << "Nhap nam sinh sinh vien: " << endl;
+  cout << "\nNhap nam sinh sinh vien: ";
   cin >> x.namsinh;
 }
 /// xuat thong tin cua mot sinh vien
@@ -47,7 +46,7 @@ void Xuat_Danhsach_Sinhvien(sv a[], int n)
 {
   for(int i = 0; i<n; i++)
   {
-    cout << "\n\n\t\tXuat danh sach sinh vien" << i + 1;
+    cout << "\n\n\t\tXuat danh sach sinh vien " << i + 1;
     Xuat_Thongtin_Sinhvien(a[i]);
   }
 }
@@ -58,7 +57,7 @@ int main()
   cout << "Nhap so luong sinh vien: " << endl;
   cin >> n;
   cout << "Nhap danh sach sinh vien";
-  Nhap_Danhsach_Sinhvien(a,n);
+  Nhap_Danhsach_Sinhvien(a, n);
   cout << "xuat danh sach sinh vien";
-  Xuat_Danhsach_Sinhvien(a,n);
+  Xuat_Danhsach_Sinhvien(a, n);
 }
