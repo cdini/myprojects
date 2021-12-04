@@ -1,31 +1,22 @@
 #include <iostream>
 #include <string>
 using namespace std;
-void NhapMang(int a[], int &n)
+
+class ConNguoi
 {
-  for(int i = 0; i < n; i++)
-  {
-    printf("\na[%d]: ",i);
-    scanf("%d",&a[i]);
-  }
+  public:
+    string GioiTinh;
+    int tuoi;
+    float Chieu_cao;
+    bool con_zin;
+};
+
+int main()
+{
+  ConNguoi nguoi;
+  nguoi.GioiTinh = "Nam";
+  nguoi.tuoi = 20;
+  nguoi.Chieu_cao = 1.7;
+  nguoi.con_zin = true;
+  cout << nguoi.GioiTinh << endl;
 }
-void XuatMang(int a[], int n)
-{
-  for(int i = 0; i < n; i++)
-  {
-    printf("%d\t",a[i]);
-      
-  }
-}
-int main() 
-{
-  int a[100];
-  int n;
-  printf("Nhap so phan tu: ");
-	scanf("%d", &n);
-  printf("\nNhap mang : ");
-  NhapMang(a, n);
-  printf("\nXuat mang : ");
-  XuatMang(a, n);
-  return 0;
-} 
